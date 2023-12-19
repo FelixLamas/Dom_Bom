@@ -13,6 +13,31 @@
     <title>Práctica de DOM y BOM</title>
   </head>
   <body>
+    <header class="container text-center py-4"><h1>Números Mágicos</h1></header>
+    <main class="container text-center">
+      <section>
+        <article>
+          <button
+            type="button"
+            id="comenzar"
+            onclick="handlerOnClick()"
+            class="btn btn-success"
+          >
+            Comenzar el juego
+          </button>
+        </article>
+        <article class="py-4">
+          <form class="d-flex flex-column w-25 mx-auto">
+            <label for="numero" class="mb-2">Ingresa tu número</label>
+            <input type="text" name="numero" id="numero" class="mb-3" />
+            <button type="submit" class="btn btn-primary" class="mb-3">
+              Enviar
+            </button>
+          </form>
+        </article>
+      </section>
+    </main>
+    <script src="js/numerosMagicos.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

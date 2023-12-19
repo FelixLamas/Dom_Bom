@@ -4,6 +4,8 @@ Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que 
 */
 let numeroMagico = undefined;
 let numeroIngresado = document.getElementById("numero");
+let listaNumIngresados = document.getElementById("listaNumerosIngresados");
+let arregloNumeros = [];
 handlerOnClick = () => {
   numeroMagico = Math.floor(Math.random() * (10 - 1) + 1);
   alert("Se genero un número mágico, intenta adivinarlo.");
@@ -13,9 +15,16 @@ let form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(numeroIngresado.value, numeroMagico);
+  console.log(arregloNumeros.length);
+
   if (numeroMagico === undefined) {
     alert("No presionaste el boton para comenzar");
   } else {
+    arregloNumeros.push(numeroIngresado.value);
+    if (arregloNumeros.length > 0) {
+      console.log(arregloNumeros);
+      listaNumIngresados.innerHTML = `${arregloNumeros}`;
+    }
     if (numeroIngresado.value == numeroMagico) {
       alert("Adivinaste el número mágico, GANASTE");
     } else {

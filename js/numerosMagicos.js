@@ -13,13 +13,17 @@ let form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(numeroIngresado.value, numeroMagico);
-  if (numeroIngresado.value == numeroMagico) {
-    alert("Adivinaste el número mágico, GANASTE");
+  if (numeroMagico === undefined) {
+    alert("No presionaste el boton para comenzar");
   } else {
-    if (numeroIngresado.value > numeroMagico) {
-      alert("El número ingresado es mayor que el número mágico.");
+    if (numeroIngresado.value == numeroMagico) {
+      alert("Adivinaste el número mágico, GANASTE");
     } else {
-      alert("El número ingresado es menor que el número mágico.");
+      if (numeroIngresado.value > numeroMagico) {
+        alert("El número ingresado es mayor que el número mágico.");
+      } else {
+        alert("El número ingresado es menor que el número mágico.");
+      }
     }
   }
 });

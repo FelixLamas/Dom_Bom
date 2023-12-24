@@ -13,9 +13,48 @@
     <title>Práctica de DOM y BOM</title>
   </head>
   <body>
-    <header class="container text-center py-4"><h1>Números Mágicos</h1></header>
-    <main class="container text-center">
+    <header class="text-center py-2 bg-dark">
+      <nav
+        class="navbar navbar-expand-lg bg-dark container"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Números Mágicos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container text-center my-4">
       <section>
+        <h2>Números Mágicos</h2>
         <article>
           <button
             type="button"

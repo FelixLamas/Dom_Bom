@@ -13,9 +13,12 @@
     <title>Práctica de DOM y BOM</title>
   </head>
   <body>
-    <header class="container text-center py-4"><h1>Números Mágicos</h1></header>
+    <header class="container text-center py-4">
+      <h1>Ejercicios del DOM con Js</h1>
+    </header>
     <main class="container text-center">
-      <section>
+      <section id="seccion1">
+        <h2>Números Mágicos</h2>
         <article>
           <button
             type="button"
@@ -36,6 +39,32 @@
             <button type="submit" class="btn btn-primary" class="mb-3">
               Enviar
             </button>
+          </form>
+        </article>
+      </section>
+      <section id="seccion2">
+        <h2>Generaciones</h2>
+        <article>
+          <form>
+            <label for="nombre">Nombre y Apellido</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Ingresa el Nombre y Apellido:"
+              minlength="7"
+              maxlength="60"
+              required
+            />
+            <label for="edad">Edad</label>
+            <input
+              type="text"
+              id="edad"
+              placeholder="Ingresa la edad:"
+              required
+              minlength="1"
+              max="3"
+            />
           </form>
         </article>
       </section>

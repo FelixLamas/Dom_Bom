@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Felix Eloy Lamas" />
+    <meta
+      name="description"
+      content="Ejercicios prácticos para el manejo del DOM Y BOM"
+    />
+    <meta name="keywords" content="DOM, BOM, HTML, CSS, BOOTSTRAP" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <title>Práctica de DOM y BOM</title>
+  </head>
+  <body>
+    <header class="text-center py-2 bg-dark">
+      <nav
+        class="navbar navbar-expand-lg bg-dark container"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">Inicio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Números Mágicos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Generaciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-4">
+      <section id="seccion2">
+        <h2 class="text-center">Generaciones</h2>
+        <article class="w-50 mx-auto">
+          <form id="formulario">
+            <label for="nombre" class="col-12">Nombre y Apellido: </label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Ingresa el Nombre y Apellido"
+              minlength="7"
+              maxlength="60"
+              required
+              class="col-12 mb-2"
+            />
+            <label for="edad" class="col-12">Edad: </label>
+            <input
+              type="text"
+              id="edad"
+              placeholder="Ingresa la edad"
+              required
+              minlength="1"
+              max="3"
+              class="col-12 mb-2"
+            />
+            <label for="dni" class="col-12">DNI: </label>
+            <input
+              type="text"
+              id="dni"
+              placeholder="Ingresa el dni"
+              required
+              minlength="6"
+              max="8"
+              class="col-12 mb-2"
+            />
+            <label for="sexo" class="col-12">Sexo: </label>
+            <select name="sexo" id="sexo" class="col-12 mb-2">
+              <option value="" selected>Eliga una opción</option>
+              <option value="H">Hombre</option>
+              <option value="M">Mujer</option>
+            </select>
+            <label for="peso" class="col-12">Peso: </label>
+            <input
+              type="text"
+              name="peso"
+              id="peso"
+              required
+              minlength="1"
+              maxlength="3"
+              placeholder="Ingresa el peso"
+              class="col-12 mb-2"
+            />
+            <label for="altura" class="col-12">Altura: </label>
+            <input
+              type="text"
+              name="altura"
+              id="altura"
+              required
+              placeholder="Ingresa la altura"
+              minlength="2"
+              maxlength="3"
+              class="col-12 mb-2"
+            />
+            <label for="anio" class="col-12">Año de nacimiento: </label>
+            <input
+              type="text"
+              id="anio"
+              minlength="4"
+              maxlength="4"
+              required
+              class="col-12 mb-2"
+              placeholder="Ingresa el año de nacimiento"
+            />
+            <button type="submit">Cargar datos</button>
+          </form>
+        </article>
+      </section>
+      <section>
+        <article>
+          <h2 class="text-center">Listado de personas</h2>
+          <table class="mx-auto">
+            <thead>
+              <tr>
+                <th>Nombre y Apellido</th>
+                <th>Generacion</th>
+                <th>¿Es mayor de edad?</th>
+                <th>Información</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </article>
+      </section>
+
+      <section id="modal"></section>
+    </main>
+    <script src="../js/generaciones.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

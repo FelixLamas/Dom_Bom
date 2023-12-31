@@ -44,9 +44,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="listaDeTareas.html"
-                  >Lista de tareas</a
-                >
+                <a class="nav-link" href="#">Pricing</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -58,102 +56,91 @@
     </header>
     <main class="container my-4">
       <section id="seccion2">
-        <h2 class="text-center">Generaciones</h2>
+        <h2 class="text-center">Cargar tarea:</h2>
         <article class="w-50 mx-auto">
           <form id="formulario">
-            <label for="nombre" class="col-12">Nombre y Apellido: </label>
+            <label for="codigo" class="col-12">Código de la tarea: </label>
             <input
               type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Ingresa el Nombre y Apellido"
+              name="codigo"
+              id="codigo"
               minlength="7"
               maxlength="60"
+              disabled
               required
               class="col-12 mb-2"
             />
-            <label for="edad" class="col-12">Edad: </label>
+            <label for="nombre" class="col-12">Nombre de la tarea: </label>
             <input
               type="text"
-              id="edad"
-              placeholder="Ingresa la edad"
+              id="nombre"
+              placeholder="Ingresa nombre de la tarea"
               required
               minlength="1"
               max="3"
               class="col-12 mb-2"
             />
-            <label for="dni" class="col-12">DNI: </label>
-            <input
-              type="text"
-              id="dni"
-              placeholder="Ingresa el dni"
-              required
-              minlength="6"
-              max="8"
-              class="col-12 mb-2"
-            />
-            <label for="sexo" class="col-12">Sexo: </label>
-            <select name="sexo" id="sexo" class="col-12 mb-2">
+
+            <label for="prioridad" class="col-12">Prioridad: </label>
+            <select name="prioridad" id="prioridad" class="col-12 mb-2">
               <option value="" selected>Eliga una opción</option>
-              <option value="H">Hombre</option>
-              <option value="M">Mujer</option>
+              <option value="Alta">Alta</option>
+              <option value="Media">Media</option>
+              <option value="Baja">Baja</option>
             </select>
-            <label for="peso" class="col-12">Peso: </label>
+            <label for="tiempo" class="col-12"
+              >Duración de la tarea (min):
+            </label>
             <input
               type="text"
-              name="peso"
-              id="peso"
+              name="tiempo"
+              id="tiempo"
               required
               minlength="1"
               maxlength="3"
-              placeholder="Ingresa el peso"
+              placeholder="Duración de la tarea"
               class="col-12 mb-2"
             />
-            <label for="altura" class="col-12">Altura: </label>
-            <input
-              type="text"
-              name="altura"
-              id="altura"
+            <label for="descripcion" class="col-12"
+              >Descripción de la tarea:
+            </label>
+            <textarea
+              name="descripcion"
+              id="descripcion"
+              cols="30"
+              rows="10"
               required
-              placeholder="Ingresa la altura"
-              minlength="2"
-              maxlength="3"
-              class="col-12 mb-2"
-            />
-            <label for="anio" class="col-12">Año de nacimiento: </label>
-            <input
-              type="text"
-              id="anio"
+              placeholder="Ingresa la descripción"
               minlength="4"
-              maxlength="4"
-              required
+              maxlength="300"
               class="col-12 mb-2"
-              placeholder="Ingresa el año de nacimiento"
-            />
-            <button type="submit">Cargar datos</button>
+            ></textarea>
+            <button type="submit">Cargar tarea</button>
           </form>
         </article>
       </section>
       <section>
         <article>
-          <h2 class="text-center">Listado de personas</h2>
+          <h2 class="text-center">Lista de tareas</h2>
           <table class="mx-auto">
             <thead>
               <tr>
-                <th>Nombre y Apellido</th>
-                <th>Generacion</th>
-                <th>¿Es mayor de edad?</th>
-                <th>Información</th>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Prioridad</th>
+                <th>Duración</th>
+                <th>Descripción</th>
+                <th>Opciones</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="tablaTareas"></tbody>
           </table>
         </article>
       </section>
 
       <section id="modal"></section>
     </main>
-    <script src="../js/generaciones.js"></script>
+    <script type="module" src="../js/listaDeTareas.js"></script>
     <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
